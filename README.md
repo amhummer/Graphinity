@@ -1,6 +1,6 @@
 # Graphinity: Equivariant Graph Neural Network Architecture for Predicting Change in Antibody-Antigen Binding Affinity
 <p align="center">
-<img src="Graphinity\_architecture\_ddg\_horizontal.png" alt="Graphinity architecture for ∆∆G prediction" width="90%">
+<img src="Graphinity_architecture_ddg_horizontal.png" alt="Graphinity architecture for ∆∆G prediction" width="90%">
 </p>
 
 Code to accompany the paper titled: "Investigating the Volume and Diversity of Data Needed for Generalizable Antibody-Antigen ∆∆G Prediction"
@@ -20,10 +20,10 @@ conda env create -f graphinity\_env\_cuda102.yaml
 We generated a synthetic ∆∆G dataset consisting of 942,723 data points by exhaustively mutating the interfaces of structurally-resolved complexes from SAbDab (Dunbar et al., 2014; Schneider et al., 2021) using FoldX (Schymkowitz et al., 2005). For more detail, please see the paper.
 
 <p align="center">
-<img src="Synthetic\_ddG\_dataset\_generation.png" alt="Synthetic ∆∆G dataset generation" width="50%">
+<img src="Synthetic_ddG_dataset_generation.png" alt="Synthetic ∆∆G dataset generation" width="50%">
 </p>
 
 
 The PDBs can be downloaded from the following links:  
-  - WT: https://opig.stats.ox.ac.uk/data/downloads/synthetic\_ddg\_wt\_pdbs.tar.gz (303 MB compressed; 2.6 GB uncompressed)  
-  - Mutant: https://opig.stats.ox.ac.uk/data/downloads/synthetic\_ddg\_mutated\_pdbs.tar.gz (195 GB compressed; 768 GB uncompressed)  
+  - WT: https://opig.stats.ox.ac.uk/data/downloads/synthetic_ddg_wt_pdbs.tar.gz (303 MB compressed; 2.6 GB uncompressed)  
+  - Mutant: https://opig.stats.ox.ac.uk/data/downloads/synthetic_ddg_mutated_pdbs.tar.gz (195 GB compressed; 768 GB uncompressed)  
