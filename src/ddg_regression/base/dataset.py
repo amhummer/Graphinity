@@ -17,14 +17,14 @@ import random
 # import code needed for typing atoms
 if __name__ == '__main__':
     import utils
-    from atom_types import Typer
+    from atom_types.atom_types import Typer
 else:
     try:
         from . import utils
-        from .atom_types import Typer
+        from atom_types.atom_types import Typer
     except:
         from base import utils
-        from base.atom_types import Typer
+        from base.atom_types.atom_types import Typer
 
 
 class ddgData(Data):

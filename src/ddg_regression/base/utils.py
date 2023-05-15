@@ -4,9 +4,9 @@ from scipy.spatial.transform import Rotation as R
 from biopandas.pdb import PandasPdb
 
 try:
-    from base.atom_types import Typer
+    from base.atom_types.atom_types import Typer
 except:
-    from atom_types import Typer
+    from atom_types.atom_types import Typer
 
 
 def get_one_hot(targets, nb_classes):
