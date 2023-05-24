@@ -28,3 +28,16 @@ We generated a synthetic ∆∆G dataset consisting of 942,723 data points by ex
 The PDBs can be downloaded from the following links:  
   - WT: https://opig.stats.ox.ac.uk/data/downloads/synthetic_ddg_wt_pdbs.tar.gz (303 MB compressed; 2.6 GB uncompressed)  
   - Mutant: https://opig.stats.ox.ac.uk/data/downloads/synthetic_ddg_mutated_pdbs.tar.gz (195 GB compressed; 768 GB uncompressed)  
+
+## Citation
+
+```
+@article{Hummer2023,
+	title = {Investigating the Volume and Diversity of Data Needed for Generalizable Antibody-Antigen ∆∆G Prediction},
+	author = {Alissa M. Hummer and Constantin Schneider and Lewis Chinery and Charlotte M. Deane},
+	journal = {bioRxiv},
+	doi = {10.1101/2023.05.17.541222},
+	URL = {https://www.biorxiv.org/content/early/2023/05/19/2023.05.17.541222},
+	year = {2023},
+}
+```
