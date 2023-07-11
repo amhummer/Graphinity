@@ -25,9 +25,9 @@ We generated a synthetic ∆∆G dataset consisting of 942,723 data points by ex
 </p>
 
 
-The PDBs can be downloaded from the following links:  
-  - WT: https://opig.stats.ox.ac.uk/data/downloads/synthetic_ddg_wt_pdbs.tar.gz (303 MB compressed; 2.6 GB uncompressed)  
-  - Mutant: https://opig.stats.ox.ac.uk/data/downloads/synthetic_ddg_mutated_pdbs.tar.gz (195 GB compressed; 768 GB uncompressed)  
+The PDBs can be downloaded from: https://opig.stats.ox.ac.uk/data/downloads/affinity_dataset/
+  - WT: synthetic_ddg_wt_pdbs.tar.gz (303 MB compressed; 2.6 GB uncompressed)  
+  - Mutant: synthetic_ddg_mutated_pdbs.tar.gz (195 GB compressed; 768 GB uncompressed)  
 
 ## Citation
 
