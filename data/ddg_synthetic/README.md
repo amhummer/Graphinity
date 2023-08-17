@@ -26,8 +26,8 @@ also in cdr\_seqid\_cutoffs directory files
 - fold\_id: id for the fold a mutation is in (split based on the length-matched CDR sequence identity cutoff provided in the file name)
 
 ## PDB files
-We have made the PDB files available at the following links.
-  - WT: https://opig.stats.ox.ac.uk/data/downloads/synthetic\_ddg\_wt\_pdbs.tar.gz (303 MB compressed; 2.6 GB uncompressed)
-  - Mutant: https://opig.stats.ox.ac.uk/data/downloads/synthetic\_ddg\_mutated\_pdbs.tar.gz (195 GB compressed; 768 GB uncompressed)
+The PDBs can be downloaded from: https://opig.stats.ox.ac.uk/data/downloads/affinity_dataset/
+  - WT: synthetic_ddg_wt_pdbs.tar.gz (303 MB compressed; 2.6 GB uncompressed)
+  - Mutant: synthetic_ddg_mutated_pdbs.tar.gz (195 GB compressed; 768 GB uncompressed)
 
 The WT pdb files are named [pdb].pdb (eg 3w2d.pdb). The mutant PDB files are named [pdb]\_[antibody\_chains]\_[antigen\_chains]\_[mutation\_id].pdb (eg 3w2d\_HL\_A\_EL1A.pdb)
