@@ -199,11 +199,8 @@ class dgEGNN(pl.LightningModule):
 
         pred = self.forward(batch) # run batch through forward
 
-        #if y.shape != pred.shape: # reshape labels if needed
-        #    y = y.view_as(pred)
-        if y.shape != pred.shape:
-            try:
-                y = y.view_as(pred)
+        if y.shape != pred.shape: # reshape labels if needed
+            y = y.view_as(pred)
         loss = self.loss_fn(pred.float(), y.float()) # calculate loss
         self.log('train_loss', loss)
 
