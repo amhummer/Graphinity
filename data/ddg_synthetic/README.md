@@ -21,8 +21,8 @@ Dataset of 942723 single-point antibody-antigen mutations generated using FoldX 
 - labels: FoldX ddG label (kcal/mol)
 - ab\_chain: antigen chain id(s); not used by the model code, provided for information
 - ag\_chain: antigen chain id(s); not used by the model code, provided for information
-- wt\_int\_energy: FoldX dG value for the WT complex (kcal/mol)
-- mut\_int\_energy: FoldX dG value for the mutant complex (kcal/mol)
+- wt\_foldx\_dg: FoldX dG value for the WT complex (kcal/mol)
+- mut\_foldx\_dg: FoldX dG value for the mutant complex (kcal/mol)
 
 also in cdr\_seqid\_cutoffs directory files
 - fold\_id: id for the fold a mutation is in (split based on the length-matched CDR sequence identity cutoff provided in the file name)
