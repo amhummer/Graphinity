@@ -708,12 +708,13 @@ class Typer:
         if return_occupancy_value:
             pdb_df = PandasPdb().read_pdb(str(inf)).df["ATOM"]
             pdb_df = pdb_df.set_index(["x_coord", "y_coord", "z_coord"])
+            occupancy_lookup = pdb_df["occupancy"].astype(int).to_dict()
             for i in range(len(df)):
-                row = df.iloc[i]
+                x = xs[i]
+                y = ys[i]
+                z = zs[i]
 
-                occupancy = int(
-                    pdb_df.loc[row["x"], row["y"], row["z"]]["occupancy"]
-                )
+                occupancy = occupancy_lookup[(x, y, z)]
                 occupancy_values.append(occupancy)
         
         return types, occupancy_values
