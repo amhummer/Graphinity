@@ -1,6 +1,15 @@
 import torch
 from torch import Tensor
 from typing import Optional
+from torch_scatter import scatter_mean
+
+def zeros(tensor): # fills tensor with 0s
+    if tensor is not None:
+        tensor.data.fill_(0)
+
+def ones(tensor): # fills tensor with 1s
+    if tensor is not None:
+        tensor.data.fill_(1)
 
 class GraphNorm(torch.nn.Module):
     r"""Applies graph normalization over individual graphs as described in the

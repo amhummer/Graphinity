@@ -29,16 +29,6 @@ import pandas as pd
 def to_np(x): # returns tensor detached, on cpu and as numpy array
     return x.cpu().detach().numpy()
 
-def zeros(tensor): # fills tensor with 0s
-    if tensor is not None:
-        tensor.data.fill_(0)
-
-def ones(tensor): # fills tensor with 1s
-    if tensor is not None:
-        tensor.data.fill_(1)
-
-        return f'{self.__class__.__name__}({self.in_channels})'
-
 class ddgEGNN(pl.LightningModule):
     def __init__(
         self,
@@ -86,7 +76,6 @@ class ddgEGNN(pl.LightningModule):
         self.dropout = dropout
         
         self.pool_graphvectors = pool_graphvectors
-        print("pool_graphvectors parameter set to: ", pool_graphvectors)
 
         if not pool_graphvectors: # ie no pooling
             self.post_pool_linear = Linear(2*self.embedding_out_nf, self.embedding_out_nf)
@@ -165,7 +154,6 @@ class ddgEGNN(pl.LightningModule):
         if not self.pool_graphvectors: # concatenate but don't pool graph_vectors -> relu activation function
             out = torch.cat(graph_vectors, dim=1)
             out = relu(self.post_pool_linear(out))
-            print(out)
         else:
             graph_vectors = torch.stack(graph_vectors, dim=0)
             if self.pool_graphvectors == 'max':
@@ -174,10 +162,7 @@ class ddgEGNN(pl.LightningModule):
                 out = torch.mean(graph_vectors, dim=0)
             if self.pool_graphvectors == 'diff': # take difference between graph_vectors (1x128 matrix from global_max_pool) of wt and mut
                 out = graph_vectors[0] - graph_vectors[1] # wt - mut
-            #else:
-            #    print('error, graphvector pooling function not implemented')
 
-        print(out)
         out = self.post_pool_linear_2(out)
 
         # out = self.post_pool_linear(out)
@@ -442,25 +427,6 @@ class ddgEGNN(pl.LightningModule):
             follow_batch=batch_ls) # follow_batch enables mini-batching ie aggregating wt & mut graphs
         
         return loader 
-
-
-def unsorted_segment_sum(data, segment_ids, num_segments):
-    result_shape = (num_segments, data.size(1))
-    result = data.new_full(result_shape, 0)  # Init empty result tensor.
-    segment_ids = segment_ids.unsqueeze(-1).expand(-1, data.size(1))
-    result.scatter_add_(0, segment_ids, data)
-    return result
-
-
-def unsorted_segment_mean(data, segment_ids, num_segments):
-    result_shape = (num_segments, data.size(1))
-    segment_ids = segment_ids.unsqueeze(-1).expand(-1, data.size(1))
-    result = data.new_full(result_shape, 0)  # Init empty result tensor.
-    count = data.new_full(result_shape, 0)
-    result.scatter_add_(0, segment_ids, data)
-    count.scatter_add_(0, segment_ids, torch.ones_like(data))
-    return result / count.clamp(min=1)
-
 
 def get_edges(n_nodes):
     rows, cols = [], []

@@ -1,0 +1,8 @@
+# Model input files
+example/ddg_synthetic/FoldX/varying_dataset_size/data/pdb_wt/
+example/ddg_synthetic/FoldX/varying_dataset_size/data/pdb_mut/
+example/ddg_synthetic/FoldX/varying_dataset_size/data/Synthetic_FoldX_ddG-varying_dataset_size-test-parquets.tar.gz
+
+lightning_logs/
+*/*/*/__pycache__
+*/*/*/*/__pycache__
