@@ -1,0 +1,6 @@
+pdb,complex,labels,chain_prot1,chain_prot2,ab_chain,ag_chain,pdb_wt,pdb_mut
+6i07,6i07_GB144F,-2.018690000000001,B,D,B,D,example/ddg_synthetic/FoldX/example_test/data/pdb_wt/6i07.pdb,example/ddg_synthetic/FoldX/example_test/data/pdb_mut/6i07_B_D_GB144F.pdb
+6q18,6q18_IA143S,-1.040300000000002,HL,A,HL,A,example/ddg_synthetic/FoldX/example_test/data/pdb_wt/6q18.pdb,example/ddg_synthetic/FoldX/example_test/data/pdb_mut/6q18_HL_A_IA143S.pdb
+6bp2,6bp2_YL92W,-0.0098999999999982,HL,A,HL,A,example/ddg_synthetic/FoldX/example_test/data/pdb_wt/6bp2.pdb,example/ddg_synthetic/FoldX/example_test/data/pdb_mut/6bp2_HL_A_YL92W.pdb
+7czz,7czz_YN38N,1.003511,JN,C,JN,C,example/ddg_synthetic/FoldX/example_test/data/pdb_wt/7czz.pdb,example/ddg_synthetic/FoldX/example_test/data/pdb_mut/7czz_JN_C_YN38N.pdb
+5m2i,5m2i_EA126W,2.0278000000000027,H,A,H,A,example/ddg_synthetic/FoldX/example_test/data/pdb_wt/5m2i.pdb,example/ddg_synthetic/FoldX/example_test/data/pdb_mut/5m2i_H_A_EA126W.pdb

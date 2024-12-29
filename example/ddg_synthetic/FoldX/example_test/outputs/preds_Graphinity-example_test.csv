@@ -1,0 +1,6 @@
+wt_pdb,mut_pdb,pred_score,true_label
+example/ddg_synthetic/FoldX/example_test/data/pdb_wt/6i07.pdb,example/ddg_synthetic/FoldX/example_test/data/pdb_mut/6i07_B_D_GB144F.pdb,-3.1229445934295654,-2.0186901092529297
+example/ddg_synthetic/FoldX/example_test/data/pdb_wt/6q18.pdb,example/ddg_synthetic/FoldX/example_test/data/pdb_mut/6q18_HL_A_IA143S.pdb,-0.5826495885848999,-1.0403000116348267
+example/ddg_synthetic/FoldX/example_test/data/pdb_wt/6bp2.pdb,example/ddg_synthetic/FoldX/example_test/data/pdb_mut/6bp2_HL_A_YL92W.pdb,0.7727124691009521,-0.00989999994635582
+example/ddg_synthetic/FoldX/example_test/data/pdb_wt/7czz.pdb,example/ddg_synthetic/FoldX/example_test/data/pdb_mut/7czz_JN_C_YN38N.pdb,1.465961217880249,1.0035109519958496
+example/ddg_synthetic/FoldX/example_test/data/pdb_wt/5m2i.pdb,example/ddg_synthetic/FoldX/example_test/data/pdb_mut/5m2i_H_A_EA126W.pdb,1.411963939666748,2.0278000831604004
