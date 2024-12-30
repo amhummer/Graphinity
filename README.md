@@ -50,7 +50,7 @@ pip install torch-cluster==1.5.9 -f https://data.pyg.org/whl/torch-1.8.0+cu102.h
 pip install torch-spline-conv==1.2.1 -f https://data.pyg.org/whl/torch-1.8.0+cu102.html --no-cache-dir
 ```
 
-An alternative to installing from the yaml file, the environment can also be created by running the following commands:
+An alternative to installing from the yaml file, the environment can also be created by running the commands below. This approach is faster, expected to take on the order of 10-30 minutes, depending on the machine.
 ```
 conda create --name graphinity_env_cuda102 python=3.7.10
 conda activate graphinity_env_cuda102
@@ -74,6 +74,33 @@ pip install pytorch-lightning==1.2.10
 pip install tqdm
 pip install wandb
 ```
+
+Graphinity can also be run without a GPU. The environment can be created without CUDA as follows:
+```
+conda create --name graphinity_env_no_cuda python=3.7.10
+conda activate graphinity_env_no_cuda
+
+conda install pytorch==1.8.0 -c pytorch
+
+pip install torch-scatter==2.0.8 --no-cache-dir
+pip install torch-sparse==0.6.12 --no-cache-dir
+pip install torch-geometric==1.6.3 --no-cache-dir
+pip install torch-cluster==1.5.9 --no-cache-dir
+pip install torch-spline-conv==1.2.1 --no-cache-dir
+
+conda install conda-forge::openbabel
+pip install biopython
+pip install numpy
+pip install pandas
+pip install pyarrow
+pip install pyyaml
+pip install biopandas
+pip install pytorch-lightning==1.2.10
+pip install tqdm
+pip install wandb
+```
+
+Graphinity has been tested on Linux and Mac. The results in the paper are from Graphinity trained and tested on Linux with 1 GPU (NVIDIA RTX 6000) and 4 CPUs.
 
 
 ## Citation

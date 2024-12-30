@@ -15,5 +15,9 @@ python3 src/ddg_regression/graphinity_inference.py -c example/ddg_synthetic/Fold
 ```
 e.g.,
 ```
-python3 src/ddg_regression/graphinity_inference.py -c example/ddg_synthetic/FoldX/varying_dataset_size/configs/config-test_varying_amounts-90000.yaml
+python3 src/ddg_regression/graphinity_inference.py -c example/ddg_synthetic/FoldX/varying_dataset_size/configs/config-test_varying_amounts-subset_90000.yaml
 ```
+
+Each test took approximately 40 minutes to run on a Linux machine with 1 GPU (NVIDIA RTX 6000) and 1 CPU.
+
+The expected outputs are included in the outputs/ directory.

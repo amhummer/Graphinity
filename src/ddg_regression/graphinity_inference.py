@@ -16,6 +16,8 @@ from base.dataset import ddgDataSet
 def main(config: dict):
     """ Build EGNN model using params specified in config file """
 
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
     if config["model"] == "ddgEGNN":
         ModelClass = ddgEGNN
     else:
@@ -30,7 +32,7 @@ def main(config: dict):
         )
 
     # Load model weights from checkpoint specified in config file
-    checkpoint = torch.load(config["initialize_weights"]["checkpoint_file"])
+    checkpoint = torch.load(config["initialize_weights"]["checkpoint_file"], map_location=device)
     pretrained_dict = {k: v for k, v in checkpoint["state_dict"].items()}
     model_dict = model.state_dict()
     model_dict.update(pretrained_dict)

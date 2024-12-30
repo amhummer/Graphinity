@@ -6,6 +6,17 @@ The parquet files for the test example, corresponding to the PDBs in Synthetic_F
 ### Running Graphinity inference
 
 From the root directory of the repository, run:
+
+CPU-only:
+```
+python3 src/ddg_regression/graphinity_inference.py -c example/ddg_synthetic/FoldX/example_test/configs/config-example_test-cpu.yaml
+```
+
+with a GPU:
 ```
 python3 src/ddg_regression/graphinity_inference.py -c example/ddg_synthetic/FoldX/example_test/configs/config-example_test.yaml
 ```
+
+This test took less than 20 seconds to run with 1 CPU (on Linux and Mac).
+
+The expected outputs are included in the outputs/ directory.
