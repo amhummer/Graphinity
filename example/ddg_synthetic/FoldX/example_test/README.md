@@ -9,14 +9,14 @@ From the root directory of the repository, run:
 
 CPU-only:
 ```
-python3 src/ddg_regression/graphinity_inference.py -c example/ddg_synthetic/FoldX/example_test/configs/config-example_test-cpu.yaml
-```
-
-with a GPU:
-```
 python3 src/ddg_regression/graphinity_inference.py -c example/ddg_synthetic/FoldX/example_test/configs/config-example_test.yaml
 ```
 
-This test took less than 20 seconds to run with 1 CPU (on Linux and Mac).
+With a GPU:
+```
+python3 src/ddg_regression/graphinity_inference.py -c example/ddg_synthetic/FoldX/example_test/configs/config-example_test-gpu.yaml
+```
 
-The expected outputs are included in the outputs/ directory.
+This test took less than 20 seconds to run with 1 CPU (on Linux and Mac) and 1 GPU + 1 CPU (on Linux).
+
+The expected outputs are included in outputs/preds_Graphinity-example_test.csv.

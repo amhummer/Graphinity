@@ -27,7 +27,7 @@ model_params:
   #max_pool_graphvectors: False #True
 
 trainer_params:
-  gpus: 0
+  gpus: 1
 
 loader_params:
   batch_size: 32
