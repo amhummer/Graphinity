@@ -1,16 +1,16 @@
-# Synthetic\_ddG\_942723
+# Synthetic\_FoldX\_ddG\_942723
 
 Dataset of 942723 single-point antibody-antigen mutations generated using FoldX (Schymkowitz et al., 2005). Structurally-resolved antibody-antigen complexes were obtained from SAbDab (Dunbar et al., 2014) and interface residues exhaustively mutated using FoldX. For more details on the method, please see the manuscript (Figure 1b, Methods section).
 
 ## Files
 
-- Synthetic\_ddG\_942723.csv
-- cdr\_seqid\_cutoffs/Synthetic\_ddG\_942723/Synthetic\_ddG\_942723-cutoff\_{none/100/90/70}-10foldcv.csv
-- varying\_dataset\_size/subset\_{size}/Synthetic\_ddG-varying\_dataset\_size-{size}-{train/val}.csv, varying\_dataset\_size/Synthetic\_ddG-varying\_dataset\_size-test.csv
-- varying\_dataset\_diversity/{diversity\_type}/{min/max}/Synthetic\_ddG-varying\_dataset\_diversity-{diversity\_type}-{min/max}-{train/val}.csv, varying\_dataset\_diversity/Synthetic\_ddG-varying\_dataset\_diversity-test.csv
+- Synthetic\_FoldX\_ddG\_942723.csv
+- cdr\_seqid\_cutoffs/Synthetic\_FoldX\_ddG\_942723-cutoff\_{none/100/90/70}-10foldcv.csv
+- varying\_dataset\_size/subset\_{size}/Synthetic\_FoldX\_ddG-varying\_dataset\_size-{size}-{train/val}.csv, varying\_dataset\_size/Synthetic\_FoldX\_ddG-varying\_dataset\_size-test.csv
+- varying\_dataset\_diversity/{diversity\_type}/{min/max}/Synthetic\_FoldX\_ddG-varying\_dataset\_diversity-{diversity\_type}-{min/max}-{train/val}.csv, varying\_dataset\_diversity/Synthetic\_FoldX\_ddG-varying\_dataset\_diversity-test.csv
 - noise\_robustness/shuffling/sh\_{percent}pct/synth\_ddg-shuffled\_{percent}\_pct-train.csv
-- noise\_robustness/gaussian\_noise/scale_{scale}/Synthetic_ddG-gaussian_noise-scale_{scale}-train.csv
-- noise\_robustness/Synthetic\_ddG-noise\_robustness-test.csv
+- noise\_robustness/gaussian\_noise/scale_{scale}/Synthetic\_FoldX\_ddG-gaussian\_noise-scale_{scale}-train.csv
+- noise\_robustness/Synthetic\_FoldX\_ddG-noise\_robustness-test.csv
 
 ## Columns CSV
 

@@ -138,7 +138,7 @@ class ddgEGNN(pl.LightningModule):
             nodes = self.embedding_in(nodes) # output tensor of dimension n_nodes x 128
 
             for egnn_layer in self.egnn_layers:
-                edge_ind_post_dropout, edge_attr_post_dropout = dropout_adj(edge_ind, edge_attr=edge_attr, p=self.dropout) # randomly drops edges from adjacency matrix; default dropout probability (p) set to 0
+                edge_ind_post_dropout, edge_attr_post_dropout = dropout_adj(edge_ind, edge_attr=edge_attr, p=self.dropout, training=self.training) # randomly drops edges from adjacency matrix; default dropout probability (p) set to 0
 
                 # update node features (and, if update_coords=True, coordinates)
                 if self.update_coords:
@@ -383,8 +383,8 @@ class ddgEGNN(pl.LightningModule):
         for f in self.dataset_config['input_files']['train']:
             ds.populate(f, overwrite=False)
 
-        if self.loader_config['balanced_sampling']:
-            raise NotImplementedError('Balanced sampling not implemented.')
+        #if self.loader_config['balanced_sampling']:
+        #    raise NotImplementedError('Balanced sampling not implemented.')
 #             weights = ds.get_sample_weights()
 #             sampler = WeightedRandomSampler(weights=weights, num_samples=len(weights))
         else:
