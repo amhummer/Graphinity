@@ -2,6 +2,9 @@
 example/ddg_synthetic/FoldX/varying_dataset_size/data/pdb_wt/
 example/ddg_synthetic/FoldX/varying_dataset_size/data/pdb_mut/
 example/ddg_synthetic/FoldX/varying_dataset_size/data/Synthetic_FoldX_ddG-varying_dataset_size-test-parquets.tar.gz
+example/ddg_synthetic/FoldX/example_train/data/pdb_wt/
+example/ddg_synthetic/FoldX/example_train/data/pdb_mut/
+example/ddg_synthetic/FoldX/example_train/data/Synthetic_FoldX_ddG-example_train-parquets.tar.gz
 
 lightning_logs/
 */*/*/__pycache__

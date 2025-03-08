@@ -103,7 +103,7 @@ pip install wandb
 Graphinity has been tested on Linux and Mac. The results in the paper are from Graphinity trained and tested on Linux with 1 GPU (NVIDIA RTX 6000) and 4 CPUs.
 
 
-## Example
+## Example inference
 Example configuration and input files to run Graphinity are included in example/ddg_synthetic/FoldX/.
 
 A small test (5 mutations, example/ddg_synthetic/FoldX/example_test/) can be run from the root directory via the following commands:
@@ -121,6 +121,22 @@ python3 src/ddg_regression/graphinity_inference.py -c example/ddg_synthetic/Fold
 This test took less than 20 seconds to run with 1 CPU (on Linux and Mac) and 1 GPU + 1 CPU (on Linux). The expected outputs are included in example/ddg_synthetic/FoldX/example_test/outputs/preds_Graphinity-example_test.csv.
 
 For more information, see example/ddg_synthetic/FoldX/.
+
+
+## Example training
+Example configuration and input files to train Graphinity are included in example/ddg_synthetic/FoldX/example_train/.
+
+CPU-only:
+```
+python3 src/ddg_regression/train.py -c example/ddg_synthetic/FoldX/example_train/configs/config-example_train.yaml
+```
+
+With a GPU (recommended):
+```
+python3 src/ddg_regression/train.py -c example/ddg_synthetic/FoldX/example_train/configs/config-example_train-gpu.yaml
+```
+
+For more information, see example/ddg_synthetic/FoldX/example_train/.
 
 
 ## Citation
