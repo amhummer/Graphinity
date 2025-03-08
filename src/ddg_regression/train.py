@@ -94,7 +94,7 @@ def main(config: dict):
         model.save_test_predictions(Path(config["save_dir"]) / f"preds_{config['name']}.csv")
 
     # Save final model parameters
-    ## NB will also save checkpoints with best validation Pearson's correlation
+    ## NB the checkpoint with best validation Pearson's correlation will also be saved in the outputs directory -- eg example/ddg_synthetic/FoldX/example_train/outputs/Graphinity-example_train/default/version_0/checkpoints/epoch=8-step=35.ckpt
     torch.save({
         "epoch": config["trainer_params"]["max_epochs"],
         "model_state_dict": model.state_dict(),

@@ -174,7 +174,6 @@ class ddgDataSet(Dataset):
         dist_intra_pr2 = cdist(coords_pr2, coords_pr2)
         intra_src_pr2, intra_dst_pr2 = np.where(dist_intra_pr2 < self.interaction_dist)
 
-        # don't need node lookup as only final distances (for edges) only measured for nodes in final dataset 
         pr2_offset = len(pr1_nodes)
 
         # edge source and destination nodes
