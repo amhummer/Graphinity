@@ -4,13 +4,14 @@
 <img src="Graphinity_architecture_ddg_horizontal.png" alt="Graphinity architecture for ∆∆G prediction" width="90%">
 </p>
 
-Code to accompany the paper titled: "Investigating the Volume and Diversity of Data Needed for Generalizable Antibody-Antigen ∆∆G Prediction"
+Code to accompany the paper titled: "Investigating the volume and diversity of data needed for generalizable antibody–antigen ΔΔG prediction" (Nature Computational Science, 2025)
+Paper: https://www.nature.com/articles/s43588-025-00823-8
 
 Equivariant graph neural network (EGNN) code developed by Constantin Schneider and Alissa Hummer.
 
 
 ## Abstract
-Antibody-antigen binding affinity lies at the heart of therapeutic antibody development: efficacy is guided by specific binding and control of affinity. Here we present Graphinity, an equivariant graph neural network architecture built directly from antibody-antigen structures that achieves state-of-the-art performance on experimental ∆∆G prediction. However, our model, like previous methods, appears to be overtraining on the few hundred experimental data points available. To investigate the amount and type of data required to generalizably predict ∆∆G, we built synthetic datasets of nearly 1 million FoldX-generated and >20,000 Rosetta Flex ddG-generated ∆∆G values. Our results indicate there is currently insufficient experimental data to accurately and robustly predict ∆∆G, with orders of magnitude more likely needed. Dataset size is not the only consideration – our tests demonstrate the importance of diversity. We also show that Graphinity can learn the distributions of experimental data, as opposed to synthetic data, using a set of >36,000 Trastuzumab variants.
+Antibody–antigen binding affinity lies at the heart of therapeutic antibody development: efficacy is guided by specific binding and control of affinity. Here we present Graphinity, an equivariant graph neural network architecture built directly from antibody–antigen structures that achieves test Pearson’s correlations of up to 0.87 on experimental change in binding affinity (ΔΔG) prediction. However, our model, like previous methods, appears to be overtraining on the few hundred experimental data points available and performance is not robust to train–test cut-offs. To investigate the amount and type of data required to generalizably predict ΔΔG, we built synthetic datasets of nearly 1 million FoldX-generated and >20,000 Rosetta Flex ddG-generated ΔΔG values. Our results indicate that there are currently insufficient experimental data to accurately and robustly predict ΔΔG, with orders of magnitude more likely needed. Dataset size is not the only consideration; diversity is also an important factor for model predictiveness. These findings provide a lower bound on data requirements to inform future method development and data collection efforts.
 
 
 ## Synthetic ∆∆G Datasets
@@ -21,7 +22,7 @@ We generated synthetic ∆∆G datasets by mutating the interfaces of structural
 </p>
 
 
-The PDBs can be downloaded from: https://opig.stats.ox.ac.uk/data/downloads/affinity_dataset/
+The PDBs can be downloaded from https://doi.org/10.5281/zenodo.15384945 (excluding PDB files for the FoldX mutant complexes, owing to dataset size restrictions) and https://opig.stats.ox.ac.uk/data/downloads/affinity_dataset/ (all PDB files).
   - FoldX (942,723 mutations):
     - WT: synthetic_foldx_ddg_wt_pdbs.tar.gz (303 MB compressed; 2.6 GB uncompressed)  
     - Mutant: synthetic_foldx_ddg_mutated_pdbs.tar.gz (195 GB compressed; 768 GB uncompressed)  
@@ -142,12 +143,12 @@ For more information, see example/ddg_synthetic/FoldX/example_train/.
 ## Citation
 
 ```
-@article{Hummer2023,
-	title = {Investigating the Volume and Diversity of Data Needed for Generalizable Antibody-Antigen ∆∆G Prediction},
+@article{Hummer2025,
+	title = {Investigating the volume and diversity of data needed for generalizable antibody–antigen ΔΔG prediction},
 	author = {Alissa M. Hummer and Constantin Schneider and Lewis Chinery and Charlotte M. Deane},
-	journal = {bioRxiv},
-	doi = {10.1101/2023.05.17.541222},
-	URL = {https://www.biorxiv.org/content/early/2023/05/19/2023.05.17.541222},
-	year = {2023},
+	journal = {Nature Computational Science},
+	doi = {10.1038/s43588-025-00823-8},
+	URL = {https://www.nature.com/articles/s43588-025-00823-8},
+	year = {2025},
 }
 ```
