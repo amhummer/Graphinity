@@ -5,6 +5,7 @@
 </p>
 
 Code to accompany the paper titled: "Investigating the volume and diversity of data needed for generalizable antibody–antigen ΔΔG prediction" (Nature Computational Science, 2025)
+
 Paper: https://www.nature.com/articles/s43588-025-00823-8
 
 Equivariant graph neural network (EGNN) code developed by Constantin Schneider and Alissa Hummer.
